@@ -9,9 +9,10 @@
   body { background: #0a0a1a; color: #fff; font-family: 'Segoe UI', sans-serif; overflow: hidden; height: 100vh; }
 
   /* ---- LOGO ---- */
-  #logo { position: fixed; top: 20px; right: 20px; z-index: 20; }
-  #logo img { width: 85px; height: 85px; object-fit: contain; transition: 0.2s; filter: drop-shadow(0 0 8px rgba(212,160,23,0.3)); }
-  #logo img:hover { transform: scale(1.1); filter: drop-shadow(0 0 14px rgba(212,160,23,0.5)); }
+  #logo { position: fixed; top: 16px; right: 20px; z-index: 20; display: flex; align-items: center; gap: 8px; }
+  #logo .lion-badge { width: 70px; height: 70px; border-radius: 50%; background: radial-gradient(circle at 40% 35%, #d4a017 0%, #b8860b 60%, #8b6914 100%); display: flex; align-items: center; justify-content: center; font-size: 40px; box-shadow: 0 0 12px rgba(212,160,23,0.4), inset 0 -3px 6px rgba(0,0,0,0.3); transition: 0.2s; cursor: pointer; border: 2px solid rgba(212,160,23,0.6); }
+  #logo .lion-badge:hover { transform: scale(1.1); box-shadow: 0 0 20px rgba(212,160,23,0.6); }
+  #logo .lion-text { font-size: 13px; font-weight: 700; color: #d4a017; text-transform: uppercase; letter-spacing: 1px; text-shadow: 0 0 8px rgba(212,160,23,0.3); line-height: 1.2; }
 
   /* ---- MENU ---- */
   #menu { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; gap: 30px; }
@@ -64,7 +65,8 @@
 
 <!-- LOGO -->
 <div id="logo">
-  <img id="logo-img" src="logo.png" alt="West Islip Lions" />
+  <div class="lion-badge">&#129409;</div>
+  <div class="lion-text">West Islip<br>Lions</div>
 </div>
 
 <!-- MENU -->
@@ -77,21 +79,6 @@
       <h3>Geometry Dash</h3>
       <p>Jump, fly, dodge — rhythm runner</p>
     </div>
-    <div class="game-card" onclick="launchGame('snake')">
-      <div class="icon">🐍</div>
-      <h3>Snake</h3>
-      <p>Classic snake — eat & grow</p>
-    </div>
-    <div class="game-card" onclick="launchGame('pong')">
-      <div class="icon">🏓</div>
-      <h3>Pong</h3>
-      <p>You vs. CPU paddle battle</p>
-    </div>
-    <div class="game-card" onclick="launchGame('breakout')">
-      <div class="icon">🧱</div>
-      <h3>Breakout</h3>
-      <p>Smash all the bricks</p>
-    < </div>
     <div class="game-card" onclick="launchGame('snake')">
       <div class="icon">🐍</div>
       <h3>Snake</h3>
