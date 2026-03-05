@@ -23,16 +23,20 @@
     background: linear-gradient(145deg, #1a1a3e, #12122a);
     border: 1px solid #333;
     border-radius: 16px;
-    padding: 30px 24px;
+    padding: 32px 24px 28px;
     text-align: center;
     cursor: pointer;
     transition: all 0.25s;
     min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
   }
   .game-card:hover { border-color: #00f0ff; transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,240,255,0.15); }
-  .game-card .icon { font-size: 48px; margin-bottom: 12px; }
-  .game-card h3 { font-size: 20px; margin-bottom: 6px; }
-  .game-card p { color: #888; font-size: 13px; }
+  .game-card .icon { font-size: 48px; margin-bottom: 4px; line-height: 1; }
+  .game-card h3 { font-size: 20px; font-weight: 600; letter-spacing: 0.5px; margin: 0; }
+  .game-card p { color: #888; font-size: 13px; margin: 0; line-height: 1.4; }
 
   /* ---- GAME CONTAINER ---- */
   #game-container { display: none; flex-direction: column; align-items: center; justify-content: center; height: 100vh; gap: 12px; }
